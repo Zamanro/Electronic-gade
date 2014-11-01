@@ -1,0 +1,9 @@
+﻿@charset "utf-8";
+  table tr td{
+	padding:10px;
+}
+table tr th{
+	padding:10px;
+	background-color:#0CC;
+	border-radius:5px;
+}

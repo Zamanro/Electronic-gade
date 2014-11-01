@@ -1,0 +1,53 @@
+﻿   *{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:14px;
+   }
+ .content #table tr td {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+ .content #table tr td {
+	font-size: 14px;
+}
+ .content #table tr td {
+	font-weight: bold;
+}
+ .content #table tr td {
+	font-weight: normal;
+}
+     	a {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #F1070B;
+	font-weight: bold;
+}
+a:link {
+	text-decoration: none;
+	color: #FFF;
+}
+a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+a:hover {
+	text-decoration: none;
+	color: #CCC;
+}
+a:active {
+	text-decoration: none;
+	color: #CCC;
+}
+.content #table th{
+	font-size: 16px;
+}
+        body,td,th {
+	color: #FFF;
+}
+h1 {
+	text-align: left;
+}
+.content #table th{
+	font-size: 16px;
+}
+h1.nn {
+	text-align: left;
+}

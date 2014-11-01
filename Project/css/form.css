@@ -1,0 +1,13 @@
+﻿@charset "utf-8";
+  img{
+	padding:1px;
+	border-radius:10px;
+	box-shadow: 0px 0px 3px #999999;
+}
+.ss{
+	margin-top:0;
+}
+   *{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:13px;
+   }
