@@ -138,32 +138,32 @@ box-shadow:1px 1px 1px #494949;
        	 <table width="546" border="1" align="center">
           <tbody>
             <tr>
-              <td colspan="2" align="center"><h2><strong>ยินดีตอนรับฝ่ายทะเบียน</strong></h2></td>
+              <td colspan="2" align="center"><h4><strong>ยินดีตอนรับฝ่ายทะเบียน</strong></h4></td>
             </tr>
             <tr>
-              <td colspan="2" align="center"><h2><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/addview">เพิ่มข้อมูลอาจารย์</a></strong></h2></td>
+              <td colspan="2" align="center"><h4><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/addview">เพิ่มข้อมูลอาจารย์</a></strong></h4></td>
             </tr>
             
               <tr>
-              <td colspan="2" align="center"><h2><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/show">ดูข้อมูลอาจารย์</a></strong></h2></td>
+              <td colspan="2" align="center"><h4><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/show">ดูข้อมูลอาจารย์</a></strong></h4></td>
             </tr>
             
              <tr>
-              <td colspan="2" align="center"><h2><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/showstudent">ดูข้อมูลนักเรียน</a></strong></h2></td>
+              <td colspan="2" align="center"><h4><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/showstudent">ดูข้อมูลนักเรียน</a></strong></h4></td>
             </tr>
             
             
               <tr>
-              <td colspan="2" align="center"><h2><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User1/addview">เพิ่มข้อมูลนักเรียน</a></strong></h2></td>
+              <td colspan="2" align="center"><h4><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User1/addview">เพิ่มข้อมูลนักเรียน</a></strong></h4></td>
             </tr>
             
             
             <tr>
-              <td align="center"><h3><strong>status</strong></h3></td>
-              <td><h3><strong><?php echo $loginData['teacherStatus'];	?></strong></h3></td>
+              <td align="center"><h4><strong>status</strong></h4></td>
+              <td><h4><strong><?php echo $loginData['teacherStatus'];	?></strong></h4></td>
             </tr>
             <tr>
-              <td colspan="2" align="center"><h3><a href="<?php echo base_url();?>index.php/home/logout">Logout</a></h3></td>
+              <td height="23" colspan="2" align="center"><h4><a href="<?php echo base_url();?>index.php/home/logout">Logout</a></h4></td>
             </tr>
           </tbody>
 </table>

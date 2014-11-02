@@ -67,60 +67,63 @@ function show()
 	
 function showstudent()
 	{
-	$data['showstudent'] = $this->teacher->getalldata();
+	$data['showstudent'] = $this->student->getalldata();
 	$this->load->view('Showstudent' ,$data);	
 
 	}
 	
 
-function getpkdata($teacherId)
+function getpkdata($studentId)
 	{
 		
 		
-		$this->teacher->setTeacherId($teacherId);
-		$data['showall']=$this->teacher->getpkdata();
-		$this->load->view('Editteacher',$data);
+		$this->student->setStudentId($studentId);
+		$data['showall']=$this->student->getpkdata();
+		$this->load->view('Editstudent',$data);
 		
 	}
 		
 function update()
 	{
-		$teacherId = $this->input->post('teacherId');
-		$teacherName = $this->input->post('teacherName');
-		$teacherLname = $this->input->post('teacherLname');
-		$teacherAddress = $this->input->post('teacherAddress');
-		$teacherEmail = $this->input->post('teacherEmail');
-		$teacherPhone = $this->input->post('teacherPhone');
-		$teacherUser = $this->input->post('teacherUser');
-		$teacherPassword = $this->input->post('teacherPassword');
-		$teacherStatus = $this->input->post('teacherStatus');
+		$studentId = $this->input->post('studentId');
+		$studentCode = $this->input->post('studentCode');
+		$studentName = $this->input->post('studentName');
+		$studentLname = $this->input->post('studentLname');
+		$studentAddress = $this->input->post('studentAddress');
 		
-		var_dump($_POST);
 		
-		$this->teacher->setTeacherId($teacherId);
-		$this->teacher->setTeacherName($teacherName);
-		$this->teacher->setTeacherLname($teacherLname);
-		$this->teacher->setTeacherAddress($teacherAddress);
-		$this->teacher->setTeacherEmail($teacherEmail);
-		$this->teacher->setTeacherPhone($teacherPhone);
-		$this->teacher->setTeacherUser($teacherUser);
-		$this->teacher->setTeacherPassword($teacherPassword);
-		$id=$this->teacher->update();
+		
+		$this->student->setStudentId($studentId);
+		$this->student->setStudentCode($studentCode);
+		$this->student->setStudentName($studentName);
+		$this->student->setStudentLname($studentLname);
+		$this->student->setStudentAddress($studentAddress);
+		
+		$id=$this->student->update();
+		
 		
 		
 		
 	}
 	
-	function deletedata($teacherId)
+	function deletedata($studentId)
 {
-	$this->teacher->setTeacherId($teacherId);
-	$this->teacher->deletedata();
+	$this->student->setStudentId($studentId);
+	$this->student->deletedata();
 	
 	
 	
 	echo "สำเร็จแล้วครับ";
 
 }
+
+function searchdata($xxx)
+	{
+	$data['showteacher'] = $this->teacher->searchdata($xxx);
+	$this->load->view('Showteacher' ,$data);	
+
+	}
+	
 
 	
  }

@@ -37,7 +37,7 @@ class CheckLogin extends CI_Controller {
  		}else{ //// ถ้าค่า $data เป็นเท็จ
 
 				$data['error'] = '<font color="RED" style="font-size:12px">!!Password หรือ Username ผิด</font>'; //ให้ $data['error'] เท่ากับข้อความ  เมื่อ ไม่มี user และ pass อยู่ในฐานข้อมูล
-				$this->load->view('login_view',$data); /// ส่งข้อมูลขึ้นไป หน้า home_login
+				$this->load->view('login_view'); /// ส่งข้อมูลขึ้นไป หน้า home_login
 		
 			return false; /// พร้อมกับ return false; 
 		}

@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <center><h1>แก้ใข</h1></center>
 <form action="<?php echo base_url(); ?>index.php/user/update" method="post">
 <center>

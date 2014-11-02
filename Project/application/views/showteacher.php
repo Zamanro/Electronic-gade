@@ -1,3 +1,11 @@
+
+
+<form action="/index.php/user/searchdata/" method="post" >
+ค้นหา
+<input type="text" name="xxx" id="xxx">
+<input type="submit" name="button" id="button" value="ค้นหา">
+</form>
+
 <table width="100%" height="87" border="1">
   <tbody>
     <tr>
@@ -31,3 +39,4 @@
     <?php } ?>
   </tbody>
 </table>
+

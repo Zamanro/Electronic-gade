@@ -173,11 +173,12 @@ box-shadow:1px 1px 1px #494949;
     <div id="header">
     	<p id="logo">
             <img src="<?php echo base_url();?>css/img/LOGO.png" width="108" height="127"/>
-            <a class="text">ระบบส่งผลคะแนนและเช็คผลการเรียนผ่านอินเทอร์เน๊ต ของโรงเรียนบ้านปากเหมือง</a>
+            <a class="text">ระบบส่งผลการเรียนและเช็คผลการเรียนผ่านอินเทอร์เน็ต ของโรงเรียนบ้านปากเหมือง</a>
         </p>
     </div>
 	<!-- Start css3menu.com HEAD section -->
-	<table class="ssssss" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<form>
+    <table class="ssssss" width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="32%">&nbsp;</td>
       <td width="44%">&nbsp;</td>
@@ -199,10 +200,10 @@ box-shadow:1px 1px 1px #494949;
         </tr>
         <tr>
           <td height="51">&nbsp;</td>
-          <td><input type="submit"  class="css_button" value="Login"/>&nbsp;&nbsp;&nbsp;<a id="sss" href="<?php echo base_url();?>index.php/home/user" </td>
+          <td><input type="submit"  class="css_button" value="Login"/>&nbsp;&nbsp;&nbsp;<a id="sss" href="<?php echo base_url();?>index.php/CheckLogin/redirects" </td>
         </tr>
       </table>
- 
+ </form>
 <!-- จบ ส่วนของ header -->
     	
 
