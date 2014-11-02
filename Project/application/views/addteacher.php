@@ -30,7 +30,7 @@
     </tr>
     <tr>
       <td bgcolor="#0A2AC1"><em><strong>Password</strong></em></td>
-      <td bgcolor="#1438E3"><input type="text" name="teacherPassword" id="teacherPassword"></td>
+      <td bgcolor="#1438E3"><input type="password" name="teacherPassword" id="teacherPassword"></td>
     </tr>
     <tr>
       <td bgcolor="#0A2AC1"><em><strong>สถานะ</strong></em></td>
