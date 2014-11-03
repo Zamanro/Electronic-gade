@@ -33,8 +33,8 @@
       <td><?php echo $SS["teacherUser"]?></td>
       <td><?php echo $SS["teacherPassword"]?></td>
       <td><?php echo $SS["teacherStatus"]?></td>
-      <td><a href="<?php echo base_url()."index.php/user/getpkdata/".$SS["teacherId"]?>">แก้ใข</a></td>
-      <td><a href="<?php echo base_url()."index.php/user/deletedata/".$SS["teacherId"]?>">ลบ</a></td>
+      <td><a href="<?php echo base_url()."index.php/Teachers/getpkdata/".$SS["teacherId"]?>">แก้ใข</a></td>
+      <td><a href="<?php echo base_url()."index.php/Teachers/deletedata/".$SS["teacherId"]?>">ลบ</a></td>
     </tr>
     <?php } ?>
   </tbody>

@@ -2,7 +2,7 @@
 <center><h1>แก้ใข</h1></center>
 <form action="<?php echo base_url(); ?>index.php/user/update" method="post">
 <center>
- <?php foreach ($showall as $SS){?>
+ <?php foreach ($showteacher as $SS){?>
 <table width="270" border="1">
   <tbody>
     <tr>

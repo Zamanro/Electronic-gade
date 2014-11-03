@@ -12,10 +12,10 @@ class CheckLogin extends CI_Controller {
  	$username =  $this->input->post('username'); /// รับค่า input ชื่อ username
 	$password =  $this->input->post('password');/// รับค่า input ชื่อ password
 	
-	$this->teacher->setTeacherUser($username); //// set ค่า username ใน Model Member
-	$this->teacher->setTeacherPassword($password); //// set ค่า password ใน Model Member
+	$this->Teacher->setTeacherUser($username); //// set ค่า username ใน Model Member
+	$this->Teacher->setTeacherPassword($password); //// set ค่า password ใน Model Member
 	
-	$data = $this->teacher->login();  ///// เรียกใช้ ฟังชั่น login ใน Model Member และน้ำตัวแปล $data มารับค่าที่ return กลับมา
+	$data = $this->Teacher->login();  ///// เรียกใช้ ฟังชั่น login ใน Model Member และน้ำตัวแปล $data มารับค่าที่ return กลับมา
 	
 	if($data){ /// เช็คค่า $data ว่ามีหรือไม่
 		foreach($data as $r){  // สั่งวน เพื่อเก็บค่าที่อบู่ใน $data

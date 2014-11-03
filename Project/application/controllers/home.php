@@ -1,6 +1,12 @@
 
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Home extends CI_Controller {
+	
+	    function __construct(){
+	   parent::__construct();
+	      $this->load->library('Excel/PHPExcel');
+    }
+
 
 function index(){  	  //// ฟังชั่นในการเรียกใช้งานครั้งแรก 
 	$session_data = $this->session->userdata('loginData'); /// แรกข้อมูลที่เก็บใน session
@@ -16,6 +22,127 @@ function index(){  	  //// ฟังชั่นในการเรียก�
 	 $this->session->unset_userdata('loginData'); /// ลบค่าใน session ชื่อ loginData
 	 header( 'Location: '.base_url().'index.php/CheckLogin/redirects' ); //ไปที่ Contorller CheckLogin ฟังชั่น redirects
  }
+ function student(){
+	 $this->load->view('page/student');
+ }
+ 
+function teacher(){
+	 $this->load->view('page/teacher');
 }
+
+function subject(){
+	 $this->load->view('page/subject');
+}
+
+function gpa(){
+	 $this->load->view('page/gpa');
+}
+
+function report(){
+	$this->load->view('page/report');
+	
+}
+function fromImport(){
+		$this->load->view('importFile');
+	}
+	
+	function importstudent(){
+			
+				$inputFileName = $_FILES['exc']['tmp_name'];
+	
+				$inputFileType = PHPExcel_IOFactory::identify($inputFileName);  
+				$objReader = PHPExcel_IOFactory::createReader($inputFileType);  
+				$objReader->setReadDataOnly(true);  
+				$objPHPExcel = $objReader->load($inputFileName);  
+				
+				
+				$objWorksheet = $objPHPExcel->setActiveSheetIndex(0);
+				$highestRow = $objWorksheet->getHighestRow();
+				$highestColumn = $objWorksheet->getHighestColumn();
+				
+				$headingsArray = $objWorksheet->rangeToArray('A1:'.$highestColumn.'1',null, true, true, true);
+				$headingsArray = $headingsArray[1];
+				
+				$r = -1;
+				$namedDataArray = array();
+				for ($row = 2; $row <= $highestRow; ++$row) {
+					$dataRow = $objWorksheet->rangeToArray('A'.$row.':'.$highestColumn.$row,null, true, true, true);
+					if ((isset($dataRow[$row]['A'])) && ($dataRow[$row]['A'] > '')) {
+						++$r;
+						foreach($headingsArray as $columnKey => $columnHeading) {
+							$namedDataArray[$r][$columnHeading] = $dataRow[$row][$columnKey];
+						}
+					}
+				}
+
+
+				for($i=0;$i<count($namedDataArray);$i++){
+
+							
+							$this->Student->setStudentCode($namedDataArray[$i]['studentCode']);
+							$this->Student->setStudentName($namedDataArray[$i]['studentName']);
+							$this->Student->setStudentLname($namedDataArray[$i]['studentLname']);
+							$this->Student->setStudentAddress($namedDataArray[$i]['studentAddress']);
+							
+							$this->Student->add();
+					
+				}
+
+	}
+	
+	function fromImports(){
+		
+		$this->load->view('importFile');
+	}
+	
+	function importteacher(){
+			
+				$inputFileName = $_FILES['exc']['tmp_name'];
+	
+				$inputFileType = PHPExcel_IOFactory::identify($inputFileName);  
+				$objReader = PHPExcel_IOFactory::createReader($inputFileType);  
+				$objReader->setReadDataOnly(true);  
+				$objPHPExcel = $objReader->load($inputFileName);  
+				
+				
+				$objWorksheet = $objPHPExcel->setActiveSheetIndex(0);
+				$highestRow = $objWorksheet->getHighestRow();
+				$highestColumn = $objWorksheet->getHighestColumn();
+				
+				$headingsArray = $objWorksheet->rangeToArray('A1:'.$highestColumn.'1',null, true, true, true);
+				$headingsArray = $headingsArray[1];
+				
+				$r = -1;
+				$namedDataArray = array();
+				for ($row = 2; $row <= $highestRow; ++$row) {
+					$dataRow = $objWorksheet->rangeToArray('A'.$row.':'.$highestColumn.$row,null, true, true, true);
+					if ((isset($dataRow[$row]['A'])) && ($dataRow[$row]['A'] > '')) {
+						++$r;
+						foreach($headingsArray as $columnKey => $columnHeading) {
+							$namedDataArray[$r][$columnHeading] = $dataRow[$row][$columnKey];
+						}
+					}
+				}
+
+
+				for($i=0;$i<count($namedDataArray);$i++){
+
+							
+							$this->Teacher->setTeacherName($namedDataArray[$i]['teacherName']);
+							$this->Teacher->setTeacherLname($namedDataArray[$i]['teacherLname']);
+							$this->Teacher->setTeacherAddress($namedDataArray[$i]['teacherAddress']);
+							$this->Teacher->setTeacherEmail($namedDataArray[$i]['teacherEmail']);
+							$this->Teacher->setTeacherPhone($namedDataArray[$i]['teacherPhone']);
+							$this->Teacher->setTeacherUser($namedDataArray[$i]['teacherUser']);
+							$this->Teacher->setTeacherPassword($namedDataArray[$i]['teacherPassword']);
+							$this->Teacher->setTeacherStatus($namedDataArray[$i]['teacherStatus']);
+							
+							
+							$this->Teacher->add();
+					
+				}
+
+	}
+	}
 
 ?>

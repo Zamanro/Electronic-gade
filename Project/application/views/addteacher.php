@@ -1,6 +1,6 @@
 
 <center><h1>เพิ่มอาจารย์</h1></center>
-<form action="<?php echo base_url(); ?>index.php/user/addview" method="post">
+<form action="<?php echo base_url(); ?>index.php/Teachers/add" method="post">
 <center>
 <table width="270" border="1">
   <tbody>

@@ -3,6 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>GPA</title>
+<script src="<?php echo base_url();?>js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+		$(document).ready(function(){
+			
+			 $(".submenu").click(function(event) {
+				  event.preventDefault();
+                var href = $(this).attr('href');
+                $('#content').fadeOut("fast").hide().load( href ).fadeIn('fast');
+            
+            });
+			
+		 });
+		
+
+	    </script>
+
 <style type="text/css">
 @font-face {
  	 	  font-family: CSPraJad Vera Serif Bold; 
@@ -121,54 +137,37 @@ box-shadow:1px 1px 1px #494949;
 	<link rel="stylesheet" href="<?php echo base_url()?>css/index_files/css3menu0/style.css" type="text/css" /><style type="text/css">._css3m{display:none}</style>
     <ul id="css3menu0" class="topmenu">
 
-<input type="checkbox" id="css3menu-switcher" class="switchbox"><label onclick="" class="switch" for="css3menu-switcher"></label>	<li class="topfirst"><a href="<?php echo base_url();?>index.php/User/addview2" class="link" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/1.png" alt=""/>ข้อมูลนักเรียน</a></li>
+<input type="checkbox" id="css3menu-switcher" class="switchbox"><label onclick="" class="switch" for="css3menu-switcher"></label>	<li class="topfirst"><a href="<?php echo base_url();?>index.php/home/student" class="submenu" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/1.png" alt=""/>ข้อมูลนักเรียน</a></li>
 
-	<li class="topmenu"><a href="#" class="link" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/2.png" alt=""/>ข้อมูลอาจารย์</a></li>
+	<li class="topmenu"><a href="<?php echo base_url();?>index.php/home/teacher" class="submenu" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/2.png" alt=""/>ข้อมูลอาจารย์</a></li>
 
-	<li class="topmenu"><a href="#" class="link" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/3.png" alt=""/>ข้อมูลรายวิชา</a></li>
+	<li class="topmenu"><a href="<?php echo base_url();?>index.php/home/subject" class="submenu" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/3.png" alt=""/>ข้อมูลรายวิชา</a></li>
 
-	<li class="topmenu"><a href="#" class="link" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/4.png" alt=""/>ข้อมูลผลการเรียน</a></li>
+	<li class="topmenu"><a href="<?php echo base_url();?>index.php/home/gpa" class="submenu" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/4.png" alt=""/>ข้อมูลผลการเรียน</a></li>
 
-	<li class="toplast"><a href="#" class="link" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/5.png" alt=""/>รายงาน</a></li>
+	<li class="toplast"><a href="<?php echo base_url();?>index.php/home/report" class="submenu" style="height:32px;line-height:32px;"><img src="<?php echo base_url()?>img/menu/5.png" alt=""/>รายงาน</a></li>
 
 </ul>
 <!-- จบ ส่วนของ header -->
     <div id="contentBody">
-   	  <div id="menu"> </div>
-       	 <table width="546" border="1" align="center">
-          <tbody>
-            <tr>
-              <td colspan="2" align="center"><h4><strong>ยินดีตอนรับฝ่ายทะเบียน</strong></h4></td>
-            </tr>
-            <tr>
-              <td colspan="2" align="center"><h4><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/addview">เพิ่มข้อมูลอาจารย์</a></strong></h4></td>
-            </tr>
-            
-              <tr>
-              <td colspan="2" align="center"><h4><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/show">ดูข้อมูลอาจารย์</a></strong></h4></td>
-            </tr>
-            
-             <tr>
-              <td colspan="2" align="center"><h4><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/showstudent">ดูข้อมูลนักเรียน</a></strong></h4></td>
-            </tr>
-            
-            
-              <tr>
-              <td colspan="2" align="center"><h4><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User1/addview">เพิ่มข้อมูลนักเรียน</a></strong></h4></td>
-            </tr>
-            
-            
-            <tr>
-              <td align="center"><h4><strong>status</strong></h4></td>
-              <td><h4><strong><?php echo $loginData['teacherStatus'];	?></strong></h4></td>
-            </tr>
-            <tr>
-              <td height="23" colspan="2" align="center"><h4><a href="<?php echo base_url();?>index.php/home/logout">Logout</a></h4></td>
-            </tr>
-          </tbody>
-</table>
+   	     	<div id="menu">
+       	  <table width="200" border="0" cellspacing="0" cellpadding="8" class="me">
+        	  <tbody>
+        	    <tr>
+        	      <th colspan="2" align="center" valign="middle" nowrap>ยินดีต้อนรับ</th>
+       	        </tr>
+        	    <tr>
+        	      <td width="53" align="right" valign="middle" nowrap>สถานะ: </td>
+        	      <td width="115" align="center" valign="middle" nowrap><?php echo $loginData['teacherStatus'];	?></td>
+      	      </tr>
+        	    <tr>
+        	      <td colspan="2" align="center" valign="middle" nowrap><a href="<?php echo base_url();?>index.php/home/logout">Logout</a></td>
+       	        </tr>
+      	    </tbody>
+      	  </table>
+        </div>
        
-        <div id="content">
+        <div id="content" align="center">
         </div>
     </div>
 </body>

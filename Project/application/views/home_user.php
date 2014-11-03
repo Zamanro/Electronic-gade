@@ -133,38 +133,25 @@ box-shadow:1px 1px 1px #494949;
 
 </ul>
 <!-- จบ ส่วนของ header -->
-    <div id="contentBody">
-   	  <div id="menu"> </div>
-       	 <table width="546" border="1" align="center">
-          <tbody>
-            <tr>
-              <td colspan="2" align="center"><h2><strong>ยินดีตอนรับฝ่ายทะเบียน</strong></h2></td>
-            </tr>
-            <tr>
-              <td colspan="2" align="center"><h2><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/addview">เพิ่มข้อมูลอาจารย์</a></strong></h2></td>
-            </tr>
-            
-              <tr>
-              <td colspan="2" align="center"><h2><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User/show">ดูข้อมูลอาจารย์</a></strong></h2></td>
-            </tr>
-            
-            
-              <tr>
-              <td colspan="2" align="center"><h2><strong><a class="fancyboxMini" href="<?php echo base_url();?>index.php/User1/addview">เพิ่มข้อมูลนักเรียน</a></strong></h2></td>
-            </tr>
-            
-            
-            <tr>
-              <td align="center"><h3><strong>status</strong></h3></td>
-              <td><h3><strong><?php echo $loginData['teacherStatus'];	?></strong></h3></td>
-            </tr>
-            <tr>
-              <td colspan="2" align="center"><h3><a href="<?php echo base_url();?>index.php/home/logout">Logout</a></h3></td>
-            </tr>
-          </tbody>
-</table>
+   <div id="contentBody">
+   	     	<div id="menu">
+       	  <table width="200" border="0" cellspacing="0" cellpadding="8" class="me">
+        	  <tbody>
+        	    <tr>
+        	      <th colspan="2" align="center" valign="middle" nowrap>ยินดีต้อนรับ</th>
+       	        </tr>
+        	    <tr>
+        	      <td width="53" align="right" valign="middle" nowrap>สถานะ: </td>
+        	      <td width="115" align="center" valign="middle" nowrap><?php echo $loginData['teacherStatus'];	?></td>
+      	      </tr>
+        	    <tr>
+        	      <td colspan="2" align="center" valign="middle" nowrap><a href="<?php echo base_url();?>index.php/home/logout">Logout</a></td>
+       	        </tr>
+      	    </tbody>
+      	  </table>
+        </div>
        
-        <div id="content">
+        <div id="content" align="center">
         </div>
     </div>
 </body>

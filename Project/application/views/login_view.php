@@ -177,7 +177,7 @@ box-shadow:1px 1px 1px #494949;
         </p>
     </div>
 	<!-- Start css3menu.com HEAD section -->
-	<form>
+	<form action="<?php echo base_url();?>index.php/CheckLogin" method="post">
     <table class="ssssss" width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="32%">&nbsp;</td>
