@@ -9,17 +9,17 @@
 <table width="100%" height="87" border="1">
   <tbody>
     <tr>
-      <td height="51" bgcolor="#15F1E6"><strong>รหัส</strong></td>
-      <td bgcolor="#15F1E6"><strong>ชื่อ</strong></td>
-      <td bgcolor="#15F1E6"><strong>นามสกุล</strong></td>
-      <td bgcolor="#15F1E6"><strong>ที่อยู่</strong></td>
-      <td bgcolor="#15F1E6"><strong>Email</strong></td>
-      <td bgcolor="#15F1E6"><strong>โทรศัพท์</strong></td>
-      <td bgcolor="#15F1E6"><strong>Username</strong></td>
-      <td bgcolor="#15F1E6"><strong>Password</strong></td>
-      <td bgcolor="#15F1E6"><strong>สถานะ</strong></td>
-      <td bgcolor="#15F1E6"><strong>ลบ</strong></td>
-      <td bgcolor="#15F1E6"><strong>แก้ใข</strong></td>
+      <td height="51" align="center" bgcolor="#15F1E6"><strong>รหัส</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>ชื่อ</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>นามสกุล</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>ที่อยู่</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>E-mail</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>โทรศัพท์</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>Username</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>Password</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>สถานะ</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>ลบ</strong></td>
+      <td align="center" bgcolor="#15F1E6"><strong>แก้ใข</strong></td>
     </tr>
     <?php foreach ($showteacher as $SS){?>
     <tr>
